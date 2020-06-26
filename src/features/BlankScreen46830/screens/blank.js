@@ -18,7 +18,7 @@ export class _Blank extends React.Component {
     title: "Blank".toUpperCase()
   }
 
-  state = { Input_2: "test" }
+  state = { Input_2: "546464", Datepicker_3: new Date("06/26/2020") }
 
   render = () => (
     <ImageBackground
@@ -59,10 +59,10 @@ export class _Blank extends React.Component {
       }}
     >
       <Input
-        placeholder="Sample text input placeholder"
+        placeholder="Number Input Placeholder"
         editable={true}
-        multiline={true}
-        textStyle={{ height: 100, fontSize: 25, color: "#e845c5" }}
+        keyboardType="numeric"
+        textStyle={{ fontSize: 20, color: "#000000" }}
         style={{
           width: "100%",
           marginLeft: 0,
@@ -76,27 +76,27 @@ export class _Blank extends React.Component {
           overflow: "visible",
           textAlign: "left",
           verticalAlign: "baseline",
-          fontSize: 25,
-          color: "#e845c5",
+          fontSize: 20,
+          color: "#000000",
           backgroundColor: "#ffffff",
           fontStyle: "normal",
           fontWeight: "normal",
           fontFamily: "System",
           borderColor: "#000000",
           borderStyle: "solid",
-          borderWidth: 3,
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
           borderRadius: 0
         }}
         value={this.state.Input_2}
         onChangeText={nextValue => this.setState({ Input_2: nextValue })}
       />
-      <Slider
-        value={50}
-        minimumValue={0}
-        maximumValue={100}
-        step={1}
-        disabled={false}
+      <Datepicker
         style={{
+          width: "100%",
           marginLeft: 0,
           marginRight: 0,
           marginTop: 5,
@@ -108,6 +108,12 @@ export class _Blank extends React.Component {
           overflow: "visible",
           textAlign: "left",
           verticalAlign: "baseline",
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          fontFamily: "System",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -115,40 +121,10 @@ export class _Blank extends React.Component {
           borderRightWidth: 0,
           borderTopWidth: 0,
           borderBottomWidth: 0,
-          borderRadius: 0,
-          fontFamily: "System"
+          borderRadius: 0
         }}
-      />
-      <Image
-        resizeMode="cover"
-        source={{
-          uri:
-            "https://d3nfddh2sbo9hk.cloudfront.net/media/project_component_resources/6.jpg"
-        }}
-        style={{
-          width: 99,
-          height: 99,
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 0,
-          marginBottom: 0,
-          paddingLeft: 0,
-          paddingRight: 0,
-          paddingTop: 0,
-          paddingBottom: 0,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0,
-          fontFamily: "System"
-        }}
+        date={this.state.Datepicker_3}
+        onSelect={nextValue => this.setState({ Datepicker_3: nextValue })}
       />
     </ImageBackground>
   )

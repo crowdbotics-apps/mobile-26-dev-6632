@@ -20,7 +20,6 @@ export class _Blank extends React.Component {
 
   state = {
     Datepicker_3: new Date("06/26/2020"),
-    Input_2: "546464",
     Radio_2: true,
     Radio_3: true,
     Radio_4: true
@@ -95,42 +94,6 @@ export class _Blank extends React.Component {
         }}
         date={this.state.Datepicker_3}
         onSelect={nextValue => this.setState({ Datepicker_3: nextValue })}
-      />
-      <Input
-        placeholder="Number Input Placeholder"
-        editable={true}
-        keyboardType="numeric"
-        textStyle={{ fontSize: 20, color: "#000000" }}
-        style={{
-          width: "100%",
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          fontSize: 20,
-          color: "#000000",
-          backgroundColor: "#ffffff",
-          fontStyle: "normal",
-          fontWeight: "normal",
-          fontFamily: "System",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0
-        }}
-        value={this.state.Input_2}
-        onChangeText={nextValue => this.setState({ Input_2: nextValue })}
       />
       <Slider
         value={60}

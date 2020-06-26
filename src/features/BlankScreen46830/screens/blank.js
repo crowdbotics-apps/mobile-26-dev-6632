@@ -127,11 +127,11 @@ export class _Blank extends React.Component {
         onChangeText={nextValue => this.setState({ Input_2: nextValue })}
       />
       <Slider
-        value={60}
+        value={100}
         minimumValue={10}
         maximumValue={100}
         step={10}
-        disabled={true}
+        disabled={false}
         style={{
           marginLeft: 0,
           marginRight: 0,
@@ -161,6 +161,64 @@ export class _Blank extends React.Component {
         maximumValue={100}
         step={10}
         disabled={true}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "right",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
+      />
+      <Slider
+        value={10}
+        minimumValue={10}
+        maximumValue={100}
+        step={10}
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "right",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
+      />
+      <Slider
+        value={100}
+        minimumValue={10}
+        maximumValue={100}
+        step={10}
+        disabled={false}
         style={{
           marginLeft: 0,
           marginRight: 0,

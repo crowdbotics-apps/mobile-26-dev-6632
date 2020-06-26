@@ -18,7 +18,13 @@ export class _Blank extends React.Component {
     title: "Blank".toUpperCase()
   }
 
-  state = { Datepicker_3: new Date("06/26/2020"), Input_2: "546464" }
+  state = {
+    Datepicker_3: new Date("06/26/2020"),
+    Input_2: "546464",
+    Radio_2: true,
+    Radio_3: true,
+    Radio_4: true
+  }
 
   render = () => (
     <ImageBackground
@@ -241,6 +247,90 @@ export class _Blank extends React.Component {
           borderRadius: 0,
           fontFamily: "System"
         }}
+      />
+      <Radio
+        text="Radio button"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
+        checked={this.state.Radio_2}
+        onChange={nextChecked => this.setState({ Radio_2: nextChecked })}
+      />
+      <Radio
+        text="Radio button"
+        disabled={true}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
+        checked={this.state.Radio_3}
+        onChange={nextChecked => this.setState({ Radio_3: nextChecked })}
+      />
+      <Radio
+        text="Radio button"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
+        checked={this.state.Radio_4}
+        onChange={nextChecked => this.setState({ Radio_4: nextChecked })}
       />
     </ImageBackground>
   )

@@ -18,7 +18,7 @@ export class _Blank extends React.Component {
     title: "Blank".toUpperCase()
   }
 
-  state = { Input_2: "546464", Datepicker_3: new Date("06/26/2020") }
+  state = { Datepicker_3: new Date("06/26/2020"), Input_2: "546464" }
 
   render = () => (
     <ImageBackground
@@ -58,6 +58,38 @@ export class _Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
+      <Datepicker
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          fontFamily: "System",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0
+        }}
+        date={this.state.Datepicker_3}
+        onSelect={nextValue => this.setState({ Datepicker_3: nextValue })}
+      />
       <Input
         placeholder="Number Input Placeholder"
         editable={true}
@@ -94,9 +126,13 @@ export class _Blank extends React.Component {
         value={this.state.Input_2}
         onChangeText={nextValue => this.setState({ Input_2: nextValue })}
       />
-      <Datepicker
+      <Slider
+        value={60}
+        minimumValue={10}
+        maximumValue={100}
+        step={10}
+        disabled={true}
         style={{
-          width: "100%",
           marginLeft: 0,
           marginRight: 0,
           marginTop: 5,
@@ -106,14 +142,8 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "right",
           verticalAlign: "baseline",
-          fontSize: 20,
-          color: "#000000",
-          backgroundColor: "#ffffff",
-          fontStyle: "normal",
-          fontWeight: "normal",
-          fontFamily: "System",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -121,10 +151,38 @@ export class _Blank extends React.Component {
           borderRightWidth: 0,
           borderTopWidth: 0,
           borderBottomWidth: 0,
-          borderRadius: 0
+          borderRadius: 0,
+          fontFamily: "System"
         }}
-        date={this.state.Datepicker_3}
-        onSelect={nextValue => this.setState({ Datepicker_3: nextValue })}
+      />
+      <Slider
+        value={60}
+        minimumValue={10}
+        maximumValue={100}
+        step={10}
+        disabled={true}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "right",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontFamily: "System"
+        }}
       />
     </ImageBackground>
   )
